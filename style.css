@@ -1,0 +1,324 @@
+/* style.css */
+
+:root {
+  --color-bg: #0f0f0f;
+  --color-text: #e9e9e9;
+  --color-accent: #18181a;
+  --color-border: #232326;
+  --color-highlight: #2b2b2e;
+  --color-card-glass: rgba(255,255,255,0.08);
+  --color-card-border: rgba(255,255,255,0.18);
+  --color-primary: #b0b0b0; /* Changed from green to grey */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  background: linear-gradient(
+    color-mix(in srgb, #000000, transparent 30%),
+    color-mix(in srgb, #000000, transparent 30%)
+  ),
+  url(https://builder.bootstrapmade.com/static/img/bg/abstract-bg-4.webp) no-repeat center center / cover;
+  background-size: cover;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary); 
+  letter-spacing: 2px;
+  gap: 0.7rem;
+}
+
+.logo-img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+}
+
+header {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem 1rem 3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary); /* Now grey */
+  letter-spacing: 2px;
+}
+
+h1, h2, h3 {
+  color: var(--color-primary); /* Now grey */
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  background: var(--color-primary); /* Now grey */
+  color: #18181a;
+}
+
+.event-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 48px 0 rgba(176,176,176,0.15); /* grey shadow */
+  border: 1.5px solid var(--color-primary); /* Now grey */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background: var(--color-primary);
+  color: #18181a;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+input,
+textarea,
+button {
+  padding: 0.75rem;
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-highlight);
+} 
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; 
+}
+
+html,body
+{
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+  display: block;;
+  flex-direction: column;
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  font-size: 1rem;
+  color: #888;
+  background: transparent;
+  border-top: 1px solid var(--color-border);
+}
+
+.event-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: nowrap;                    
+  -webkit-overflow-scrolling: touch;
+}
+
+.event-card {
+  background: var(--color-card-glass);
+  border: 1.5px solid var(--color-card-border);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 2rem 1.5rem;
+  width: 260px;
+  min-height: 180px;
+  color: var(--color-text);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+}
+
+.event-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 48px 0 rgba(46,216,167,0.15);
+  border: 1.5px solid var(--color-primary);
+}
+
+h1, h2, h3 {
+  color: var(--color-primary);
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.previous-event {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 1.2rem 0;
+  background: var(--color-card-glass);
+  border-radius: 16px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.18);
+  border: #000 1.5px solid var(--color-card-border);
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+  width: 100%;
+  max-width: 800px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-text);
+  
+}
+
+.previous-event img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+.previous-event.reverse {
+  flex-direction: row-reverse;
+}
+.previous-event:hover{
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 48px 0 rgba(46,216,167,0.15);
+  border: 1.5px solid var(--color-primary);
+}
+.previous-event .event-desc {
+  color: var(--color-text);
+  flex: 1;
+  padding: 0.2rem 0;
+}
+
+/*Spirit Yoga*/
+/* Spirit Yoga Section */
+.spirit-yoga {
+  padding: 50px 15px;
+  text-align: center;
+  background-color: #000000;
+}
+
+.spirit-yoga h2 {
+  font-size: 2.5rem;
+  color: #fffcfc;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.spirit-yoga h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #4CAF50;
+  margin: 15px auto;
+}
+
+/* Yoga Photos Grid */
+.yoga-photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.yoga-image-inline {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.yoga-image-inline:hover {
+  transform: scale(1.03);
+}
+
+.yoga-image-inline img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(42, 41, 41, 0.1);
+  border: 3px solid #262525;
+}
+
+.spirit-yoga p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fffdfd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .yoga-photos {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .yoga-image-inline {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .spirit-yoga h2 {
+    font-size: 2rem;
+  }
+}
